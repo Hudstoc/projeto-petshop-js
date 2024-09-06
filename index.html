@@ -10,14 +10,18 @@
 
 <body>
     <header>
-        <img class="logo" src="logo-petshop-gemini-sembg.png">
-        <h1>PETSHOP</h1>
+        <div class="div-logo">
+            <img class="logo" src="logo-petshop-gemini-sembg.png">
+            <h1>PETSHOP</h1>
+        </div>
+        <div class="pesquisa">
+            <section class="section-pesquisa">
+                <input type="text" placeholder="Digite o nome do pet ou do tutor" id="campo-pesquisa">
+                <button onclick="pesquisar()">Pesquisar</button>
+            </section>
+        </div>
     </header>
     <main>
-        <section>
-            <input type="text" placeholder="Digite o nome do pet ou do tutor" id="campo-pesquisa">
-            <button onclick="pesquisar()">Pesquisar</button>
-        </section>
         <section class="resultados-pesquisa" id="resultados-pesquisa">
         </section>
     </main>

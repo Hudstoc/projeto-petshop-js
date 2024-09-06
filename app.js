@@ -42,13 +42,13 @@ function pesquisar() {
             if (dado.clubinho == true) {
                 clubinho = "✔";
             }else{
-                clubinho = "X";
+                clubinho = "";
             }
 
             // Cria um novo elemento HTML para cada resultado
             resultados += `
                 <dialog id="modal-${dado.pet.nome}">
-                    <button onclick="fecharModal(this)">Fechar</button>
+                    <button onclick="fecharModal(this)" class="fechar">X</button>
                     <h2>${dado.pet.nome} - ${dado.tutor.nome}</h2>
                     <div class="row">
                         <div class="col"><h3>Pet: ${dado.pet.nome}</h3></div>
@@ -95,6 +95,7 @@ function pesquisar() {
                 <div class="item-resultado" onclick="abrirModal('modal-${dado.pet.nome}')">
                     <img class="foto" src="${dado.pet.foto}">
                     <h2>${dado.pet.nome} - ${dado.tutor.nome}</h2>
+                    <h5>Endereço: ${dado.tutor.endereco}</h5>
                     <p class="descricao-meta">
                         ${ultimoServico ? `Último serviço: ${ultimoServico.tipo} em ${ultimoServico.data}` : "Nenhum serviço registrado"}
                     </p>
@@ -102,12 +103,10 @@ function pesquisar() {
             `;
         }
         
-        if(!resultados){
-            resultados = `
-                <p>Nenhum resultado para a pesquisa</p>
-            `
-        }
+    }
         
+    if(!resultados){
+        resultados = "<p>Nenhum resultado para a pesquisa</p>";
     }
 
     // Atribui os resultados gerados à seção HTML
