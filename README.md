@@ -1,5 +1,7 @@
 ## README: Projeto Petshop - Um Mini Sistema de Gestão de Clientes e Serviços
 
+### Você pode acessar o projeto rodando em no link <https://projeto-petshop-js.vercel.app/>
+
 ### Objetivo
 
 Este projeto tem como objetivo criar um mini petshop utilizando HTML, CSS e JavaScript. A aplicação permite a busca por clientes e a visualização detalhada de seus dados, incluindo histórico de serviços, informações do pet e do tutor. A base de dados dos clientes é armazenada em um arquivo JavaScript (dados.js) para facilitar a manutenção e a adição de novos registros.
