@@ -4,7 +4,8 @@ let dadosPetshop = [
             nome: "Rex",
             raca: "Labrador",
             cor: "Dourado",
-            tamanho: "Grande"
+            tamanho: "Grande",
+            foto: "foto.png"
         },
         tutor: {
             nome: "João Silva",
@@ -33,7 +34,8 @@ let dadosPetshop = [
             nome: "Mia",
             raca: "Persa",
             cor: "Branco",
-            tamanho: "Médio"
+            tamanho: "Médio",
+            foto: "foto.png"
         },
         tutor: {
             nome: "Ana Souza",
@@ -62,7 +64,8 @@ let dadosPetshop = [
             nome: "Thor",
             raca: "Vira-lata",
             cor: "Preto e Branco",
-            tamanho: "Grande"
+            tamanho: "Grande",
+            foto: "foto.png"
         },
         tutor: {
             nome: "Carlos Pereira",
@@ -97,7 +100,32 @@ let dadosPetshop = [
             nome: "Nemo",
             raca: "Palhaço",
             cor: "Laranja e Branco",
-            tamanho: "Pequeno"
+            tamanho: "Pequeno",
+            foto: "foto.png"
+        },
+        tutor: {
+            nome: "Maria Fernandes",
+            telefone: "(41) 87654-3210",
+            endereco: "Rua dos Corais, nº 50"
+        },
+        servicos: [
+            {
+                tipo: "Limpeza do Aquário",
+                valor: 80.00,
+                formapagamento: "Pix",
+                data: "2023-12-08"
+            }
+        ],
+        clubinho: false,
+        observacoes: "Alimentar com ração específica para peixes marinhos."
+    },
+    {
+        pet: {
+            nome: "Nemo",
+            raca: "Palhaço",
+            cor: "Laranja e Branco",
+            tamanho: "Pequeno",
+            foto: "foto.png"
         },
         tutor: {
             nome: "Maria Fernandes",

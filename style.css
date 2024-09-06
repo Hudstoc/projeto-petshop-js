@@ -24,6 +24,7 @@ h1 {
     color: #222831; /* Cor do texto */
     text-align: center; /* Alinha o texto ao centro */
     letter-spacing: 0.4rem; /* Espaçamento entre letras */
+    margin-top: 0; /* Espaçamento superior reduzido para colar na logo */
 }
 
 /* Estiliza as seções da página */
@@ -59,22 +60,30 @@ section button {
 
 /* Ajuste de tamanho da logo do site */
 .logo{
-    width: 150px;
+    width: 100px;
     margin: 0 auto;
 }
 
 /* Estiliza a caixa de resultados da pesquisa */
 .resultados-pesquisa {
     width: 60rem; /* Largura máxima da caixa de resultados */
-    height: 46vh; /* Altura máxima da caixa de resultados */
+    height: 50vh; /* Altura máxima da caixa de resultados */
     overflow-y: auto; /* Adiciona rolagem vertical se necessário */
     margin-top: 1rem; /* Espaçamento acima da caixa de resultados */
     padding: 1rem; /* Espaçamento interno */
     border-radius: 0.6rem; /* Borda arredondada */
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
 }
 
 /* Estiliza cada item de resultado */
 .item-resultado {
+    cursor: pointer;
+    width: 20%;
+    height: inherit;
     background: #FFFFFF; /* Cor de fundo dos itens */
     border-radius: 0.6rem; /* Borda arredondada */
     padding: 1rem; /* Espaçamento interno */
@@ -151,4 +160,14 @@ dialog {
     border-radius: .5rem;
     box-shadow: 0 0 1em rgba(0, 0, 0, 0.3);
     width: 50vw;
+}
+
+.foto{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
 }

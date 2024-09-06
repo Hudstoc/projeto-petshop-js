@@ -68,6 +68,7 @@ function pesquisar() {
             </dialog>
 
             <div class="item-resultado" onclick="abrirModal('modal-${dado.pet.nome}')">
+                <img class="foto" src="${dado.pet.foto}">
                 <h2>${dado.pet.nome} - ${dado.tutor.nome}</h2>
                 <p class="descricao-meta">
                     ${ultimoServico ? `Último serviço: ${ultimoServico.tipo} em ${ultimoServico.data}` : "Nenhum serviço registrado"}
