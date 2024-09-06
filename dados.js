@@ -30,77 +30,89 @@ let dadosPetshop = [
     },
     {
         pet: {
-            nome: "Nina",
-            raca: "Shih Tzu",
+            nome: "Mia",
+            raca: "Persa",
             cor: "Branco",
-            tamanho: "Pequeno"
+            tamanho: "Médio"
         },
         tutor: {
-            nome: "Ana Maria",
+            nome: "Ana Souza",
             telefone: "(21) 91234-5678",
-            endereco: "Avenida Brasil, nº 123"
+            endereco: "Avenida das Flores, nº 150"
         },
-        servicos: {
-            tipo: "Banho e Higiênica",
-            valor: 80.00,
-            data: "2023-12-05"
-        },
-        pagamento: {
-            forma: "Dinheiro",
-            valor: 80.00
-        },
+        servicos: [
+            {
+                tipo: "Tosa Higiênica",
+                valor: 50.00,
+                formapagamento: "Dinheiro",
+                data: "2023-12-10"
+            },
+            {
+                tipo: "Consulta Veterinária",
+                valor: 150.00,
+                formapagamento: "Pix",
+                data: "2023-12-05"
+            }
+        ],
         clubinho: false,
-        observacoes: "Não gosta de banhos muito demorados.",
-        historico: ["2023-12-05", "2023-11-28"]
+        observacoes: "Não gosta de outros animais."
     },
     {
         pet: {
             nome: "Thor",
-            raca: "Golden Retriever",
-            cor: "Amarelo",
-            tamanho: "Médio"
+            raca: "Vira-lata",
+            cor: "Preto e Branco",
+            tamanho: "Grande"
         },
         tutor: {
-            nome: "Pedro Santos",
-            telefone: "(19) 34567-8901",
-            endereco: "Rua das Flores, nº 456"
+            nome: "Carlos Pereira",
+            telefone: "(19) 34567-8910",
+            endereco: "Rua dos Pássaros, nº 200"
         },
-        servicos: {
-            tipo: "Banho",
-            valor: 60.00,
-            data: "2023-12-10"
-        },
-        pagamento: {
-            forma: "Pix",
-            valor: 60.00
-        },
+        servicos: [
+            {
+                tipo: "Banho e Tosa",
+                valor: 120.00,
+                formapagamento: "Cartão",
+                data: "2023-11-25"
+            },
+            {
+                tipo: "Adestramento",
+                valor: 200.00,
+                formapagamento: "Boleto",
+                data: "2023-12-15"
+            },
+            {
+                tipo: "Hospedagem",
+                valor: 50.00,
+                formapagamento: "Dinheiro",
+                data: "2023-12-20"
+            }
+        ],
         clubinho: true,
-        observacoes: "Muito ativo, precisa de bastante exercício.",
-        historico: ["2023-12-10", "2023-12-03"]
+        observacoes: "Necessita de passeios longos."
     },
     {
         pet: {
-            nome: "Luna",
-            raca: "Persa",
-            cor: "Cinza",
+            nome: "Nemo",
+            raca: "Palhaço",
+            cor: "Laranja e Branco",
             tamanho: "Pequeno"
         },
         tutor: {
-            nome: "Maria Fernanda",
-            telefone: "(41) 98765-4321",
-            endereco: "Rua dos Pássaros, nº 789"
+            nome: "Maria Fernandes",
+            telefone: "(41) 87654-3210",
+            endereco: "Rua dos Corais, nº 50"
         },
-        servicos: {
-            tipo: "Banho e Tosa",
-            valor: 120.00,
-            data: "2023-12-15"
-        },
-        pagamento: {
-            forma: "Cartão",
-            valor: 120.00
-        },
+        servicos: [
+            {
+                tipo: "Limpeza do Aquário",
+                valor: 80.00,
+                formapagamento: "Pix",
+                data: "2023-12-08"
+            }
+        ],
         clubinho: false,
-        observacoes: "Pelos sensíveis, usar produtos específicos.",
-        historico: ["2023-12-15"]
+        observacoes: "Alimentar com ração específica para peixes marinhos."
     }
 ];
