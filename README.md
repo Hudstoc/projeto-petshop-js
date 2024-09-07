@@ -62,7 +62,7 @@ O modelo de linguagem Google Gemini foi utilizado como ferramenta auxiliar duran
 
 **Agradecimentos:**
 
-Agradeço ao Google Gemini pela valiosa ajuda durante o desenvolvimento deste projeto.
+Agradeço à Alura e aos seus professores pela maravilhosa Imersão Dev com Gemini e pelo valioso ensino durante a mesma.
 
 **## Contribuições**
 
