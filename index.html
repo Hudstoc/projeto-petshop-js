@@ -6,19 +6,135 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>Petshop</title>
+
+    <script src="https://kit.fontawesome.com/7e438c6dfe.js" crossorigin="anonymous"></script>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
 </head>
 
 <body>
-    <header>
-        <div class="div-logo">
+    <header class="d-flex row">
+        <div class="div-logo col-md-4">
             <img class="logo" src="logo-petshop-gemini-sembg.png">
             <h1>PETSHOP</h1>
         </div>
-        <div class="pesquisa">
-            <section class="section-pesquisa">
+        <div class="pesquisa col-md-8">
+            <section class="section-pesquisa d-flex">
                 <input type="text" placeholder="Digite o nome do pet ou do tutor" id="campo-pesquisa">
                 <button onclick="pesquisar()">Pesquisar</button>
             </section>
+            <!--<section>
+
+                <dialog id="modal-form">
+                    <button onclick="fecharModal(this)" class="fechar">X</button>
+                    <form class="col-11 container mt-3" id="formPet">
+                        <fieldset>
+                            <legend class="d-flex justify-content-center">Cadastro de cliente</legend>
+            
+                            <div class="form-group row mt-3 d-flex align-items-center" >
+                                <label for="nomePet" class="col-4 col-md-2 d-flex justify-content-start">*PET:</label>
+                                <input class="form-control col-8 col-md-4" type="text" name="nomePet" id="nomePet">
+            
+                                <label for="nomeTutor" class="col-4 col-md-2 d-flex justify-content-start">*TUTOR:</label>
+                                <input class="form-control col-8 col-md-4" type="text" name="nomeTutor" id="nomeTutor">
+                            </div>
+            
+                            <div class="form-group row d-flex align-items-center">
+                                <label for="raca" class="col-4 col-md-2 d-flex justify-content-start">*RAÇA:</label>
+                                <select class="form-control col-8 col-md-4" id="raca">
+                                    <option>NRD (Nenhuma raça definida)</option>
+                                    <option>Akita</option>
+                                    <option>Basset hound</option>
+                                    <option>Beagle</option>
+                                    <option>Bichon frisé</option>
+                                    <option>Boiadeiro australiano</option>
+                                    <option>Border collie</option>
+                                    <option>Boston terrier</option>
+                                    <option>Boxer</option>
+                                    <option>Buldogue francês</option>
+                                    <option>Buldogue inglês</option>
+                                    <option>Bull terrier</option>
+                                    <option>Cane corso</option>
+                                    <option>Cavalier king charles spaniel</option>
+                                    <option>Chihuahua</option>
+                                    <option>Chow chow</option>
+                                    <option>Cocker spaniel inglês</option>
+                                    <option>Dachshund</option>
+                                    <option>Dálmata</option>
+                                    <option>Doberman</option>
+                                    <option>Dogo argentino</option>
+                                    <option>Dogue alemão</option>
+                                    <option>Fila brasileiro</option>
+                                    <option>Golden retriever</option>
+                                    <option>Husky siberiano</option>
+                                    <option>Jack russell terrier</option>
+                                    <option>Labrador retriever</option>
+                                    <option>Lhasa apso</option>
+                                    <option>Lulu da pomerânia</option>
+                                    <option>Maltês</option>
+                                    <option>Mastiff inglês</option>
+                                    <option>Mastim tibetano</option>
+                                    <option>Pastor alemão</option>
+                                    <option>Pastor australiano</option>
+                                    <option>Pastor de Shetland</option>
+                                    <option>Pequinês</option>
+                                    <option>Pinscher</option>
+                                    <option>Pit bull</option>
+                                    <option>Poodle</option>
+                                    <option>Pug</option>
+                                    <option>Rottweiler</option>
+                                    <option>Schnauzer</option>
+                                    <option>Shar-pei</option>
+                                    <option>Shiba</option>
+                                    <option>Shih tzu</option>
+                                    <option>Staffordshire bull terrier</option>
+                                    <option>Weimaraner</option>
+                                    <option>Yorkshire</option>
+                                </select>
+            
+                                <label for="cor" class="col-4 col-md-2 d-flex justify-content-start">*COR:</label>
+                                <input class="form-control col-8 col-md-4" type="text" name="cor" id="cor">
+                            </div>
+            
+                            <div class="form-group row d-flex align-items-center">
+                                <label for="tamanho" class="col-4 col-md-2 d-flex justify-content-start">*TAM:</label>
+                                <select class="form-control col-8 col-md-2" id="tamanho">
+                                    <option>PEQUENO</option>
+                                    <option selected>MEDIO</option>
+                                    <option>GRANDE</option>
+                                </select>
+            
+                                <label for="tel" class="col-2 col-md-2 d-flex justify-content-center">*TEL:</label>
+                                <input class="form-control col-4 col-md-2" type="text" name="tel" id="tel">
+                            </div>
+            
+                            <div class="form-group row d-flex align-items-center">
+                                <label for="endereco" class="col-4 col-md-2 d-flex justify-content-start">*END.:</label>
+                                <input class="form-control col-8 col-md-4 d-flex justify-content-start" type="text" name="endereco" id="endereco">
+                            </div>
+            
+                            <div class="form-group row d-flex align-items-center">
+                                <input class="form-check-input" type="checkbox" value="" id="clubinho">
+                                <label class="form-check-label ml-1" for="clubinho">Clubinho</label>
+                            </div>
+
+                            <div class="form-group row d-flex align-items-center">
+                                <label for="observacoes" class="col-4 col-md-2 d-flex justify-content-start">*OBS.:</label>
+                                <input class="form-control col-8 col-md-4 d-flex justify-content-start" type="text" name="observacoes" id="observacoes">
+                            </div>
+            
+                            <div>
+                                <button type="submit" class="btn btn-success" id="addAdicionar">Adicionar</button>
+                            </div>
+            
+                        </fieldset>
+                    </form>
+                </dialog>
+
+                <button onclick="abrirModal('modal-form')">Adicionar novo Pet</button>
+            </section>-->
         </div>
     </header>
     <main>
@@ -28,8 +144,11 @@
     <footer>
         <p>2024 - Petshop. Todos os direitos reservados</p>
     </footer>
+
     <script src="dados.js"></script>
     <script src="app.js"></script>
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 </body>
 
 </html>

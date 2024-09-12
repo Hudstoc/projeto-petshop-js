@@ -144,3 +144,31 @@ let dadosPetshop = [
         observacoes: "Alimentar com ração específica para peixes marinhos."
     }
 ];
+
+function adicionarPet(nomePet, raca, cor, tamanho, nomeTutor, tel, endereco, clubinho, observacoes) {
+    const novoPet = {
+        pet: {
+            nome: nomePet,
+            raca: raca,
+            cor: cor,
+            tamanho: tamanho,
+            foto: "foto.png"
+        },
+        tutor: {
+            nome: nomeTutor,
+            telefone: tel,
+            endereco: endereco
+        },
+        servicos: [
+            {
+                tipo: "",
+                valor: "",
+                formapagamento: "",
+                data: ""
+            }
+        ],
+        clubinho: clubinho,
+        observacoes: observacoes
+    };
+    dadosPetshop.push(novoPet);
+}

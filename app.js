@@ -21,12 +21,14 @@ function pesquisar() {
     // Inicializa uma string vazia para armazenar os textos alterados para minusculo
     let petNome = "";
     let tutorNome = "";
+    let telefone = "";
 
     // Itera sobre cada dado da lista de dados
     for (let dado of dadosPetshop) {
 
         petNome = dado.pet.nome.toLowerCase();
         tutorNome = dado.tutor.nome.toLowerCase();
+        telefone = dado.tutor.telefone.replace(/\D/g, '');
         
         // Se pet nome ou tutor nome includes campoPesquisa
         if(petNome.includes(campoPesquisa) || tutorNome.includes(campoPesquisa)){
@@ -62,7 +64,9 @@ function pesquisar() {
                         <div class="col"><h3>Tutor: ${dado.tutor.nome}</h3></div>
                     </div>
                     <div class="row">
-                        <div class="col">Telefone: ${dado.tutor.telefone}</div>
+                        <div class="col">
+                            Telefone: ${dado.tutor.telefone} <a href="tel:+55${telefone}" target="_blank"><i class="fas fa-phone-alt"></i></a> <a href="https://wa.me/55${telefone}" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                        </div>
                         <div class="col">Endereço: ${dado.tutor.endereco}</div>
                     </div>
                     <p>
@@ -92,13 +96,15 @@ function pesquisar() {
                     </div>
                 </dialog>
 
-                <div class="item-resultado" onclick="abrirModal('modal-${dado.pet.nome}')">
-                    <img class="foto" src="${dado.pet.foto}">
-                    <h2>${dado.pet.nome} - ${dado.tutor.nome}</h2>
-                    <h5>Endereço: ${dado.tutor.endereco}</h5>
-                    <p class="descricao-meta">
-                        ${ultimoServico ? `Último serviço: ${ultimoServico.tipo} em ${ultimoServico.data}` : "Nenhum serviço registrado"}
-                    </p>
+                <div class="col-md-3 mb-4" style="height: 100%">
+                    <div class="item-resultado" onclick="abrirModal('modal-${dado.pet.nome}')">
+                        <img class="foto" src="${dado.pet.foto}">
+                        <h2>${dado.pet.nome} - ${dado.tutor.nome}</h2>
+                        <h5>Endereço: ${dado.tutor.endereco}</h5>
+                        <p class="descricao-meta">
+                            ${ultimoServico ? `Último serviço: ${ultimoServico.tipo} em ${ultimoServico.data}` : "Nenhum serviço registrado"}
+                        </p>
+                    </div>
                 </div>
             `;
         }
@@ -123,3 +129,26 @@ function fecharModal(botao) {
     const modal = botao.parentElement;
     modal.close();
 }
+
+// app.js
+const formPet = document.getElementById('formPet');
+
+formPet.addEventListener('submit', (event) => {
+    event.preventDefault(); // Impede o recarregamento da página
+
+    const nomePet = document.getElementById('nomePet').value;
+    const raca = document.getElementById('raca').value;
+    const cor = document.getElementById('cor').value;
+    const tamanho = document.getElementById('tamanho').value;
+    const nomeTutor = document.getElementById('nomeTutor').value;
+    const tel = document.getElementById('tel').value;
+    const endereco = document.getElementById('endereco').value;
+    const clubinho = document.getElementById('clubinho').value;
+    const observacoes = document.getElementById('observacoes').value;
+
+    adicionarPet(nomePet, raca, cor, tamanho, nomeTutor, tel, endereco, clubinho, observacoes);
+    console.log(dadosPetshop);
+
+    // Limpar os campos do formulário (opcional)
+    formPet.reset();
+});
